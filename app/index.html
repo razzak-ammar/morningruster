@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MorningRuster</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css" />
+</head>
+
+<body>
+  <ion-app>
+    <!-- HEADER -->
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>MorningRuster</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <!-- CONTENT -->
+    <ion-content padding>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>MorningRuster</ion-card-subtitle>
+          <ion-card-title>Welcome to MorningRuster</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          Hi!, I am Ruster. Your morning assistant in making sure you get up every morning on time!
+          <br><br>
+          <p>If you don't mind, can I have your name?</p>
+          <ion-input placeholder="Enter Your Name"></ion-input>
+          <ion-button color="primary" fill="outline">Submit Name</ion-button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title center>When Would You Like to Get Up Tomorrow?</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-item>
+            <ion-label>Time (24 Hour Format)</ion-label>
+            <ion-datetime display-format="HH:mm" value="02:33"></ion-datetime>
+          </ion-item>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-subtitle>You have 2 Hours and 2 Min</ion-card-title>
+            <ion-card-title>Before Getting Up</ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-content>
+    <!-- FOOTER -->
+    <ion-footer>
+      <ion-toolbar>
+        <ion-title>
+          Copyright &copy; 2019
+        </ion-title>
+      </ion-toolbar>
+    </ion-footer>
+  </ion-app>
+
+
+
+  <script src="./main.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
+</body>
+
+</html>
