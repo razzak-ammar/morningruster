@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MorningRuster</title>
+  <link rel="stylesheet" href="./css/ionic.css">
   <link rel="stylesheet" href="./css/app.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/css/ionic.bundle.css" />
 </head>
 
 <body>
-  <ion-app>
+  <ion-app id="app">
     <!-- HEADER -->
     <ion-header>
       <ion-toolbar>
@@ -19,7 +19,7 @@
       </ion-toolbar>
     </ion-header>
     <!-- CONTENT -->
-    <ion-content padding>
+    <ion-content padding class="masters">
       <ion-card>
         <ion-card-header>
           <ion-card-subtitle>MorningRuster</ion-card-subtitle>
@@ -27,10 +27,6 @@
         </ion-card-header>
         <ion-card-content>
           Hi!, I am Ruster. Your morning assistant in making sure you get up every morning on time!
-          <br><br>
-          <p>If you don't mind, can I have your name?</p>
-          <ion-input placeholder="Enter Your Name"></ion-input>
-          <ion-button color="primary" fill="outline">Submit Name</ion-button>
         </ion-card-content>
       </ion-card>
       <ion-card>
@@ -53,17 +49,14 @@
     </ion-content>
     <!-- FOOTER -->
     <ion-footer>
-      <ion-toolbar>
+      <ion-toolbar padding>
         <ion-title>
-          Copyright &copy; 2019
         </ion-title>
       </ion-toolbar>
     </ion-footer>
   </ion-app>
-
-
-
-  <script src="./main.js"></script>
+  <script src="./main.js">
+  </script>
   <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
 </body>

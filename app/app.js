@@ -2,8 +2,8 @@ const content = document.querySelector('.content');
 const btn = document.querySelector('.btn');
 const repeat = document.querySelector('.repeat');
 
-const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-const recognition = new SpeechRecognition();
+const SpeechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
+const recognition = new SpeechRecognition()
 
 recognition.onstart = function () {
   console.log('voice is activated, you can use microphone');
