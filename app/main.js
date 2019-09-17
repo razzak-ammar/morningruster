@@ -9,7 +9,7 @@ recognition.onstart = function () {
 
 // First Instance 
 document.addEventListener('DOMContentLoaded', function () {
-  var audio = new Audio('./assests/2.mp3')
+  var audio = new Audio('./assests/hello_1.mp3')
   audio.play();
 
   audio.addEventListener('ended', function () {
