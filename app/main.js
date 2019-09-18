@@ -1,4 +1,5 @@
-
+// Not Understand Array
+let notUnderstand = ['./assests/2.mp3', './assests/3.mp3'];
 // Speech Recognization 
 const SpeechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition()
@@ -21,14 +22,22 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Or First Instance
 document.querySelector('#fab-alert').addEventListener('click', function () {
-  var audio = new Audio('./assests/hello_1.mp3')
+  var audio = new Audio('./assests/2.mp3')
   audio.play();
 
   audio.addEventListener('ended', function () {
     audio.currentTime = 0;
     askName();
   })
+
 })
+
+// Speak Audio Function
+function speakAudio(name) {
+  audio = new Audio(`./assests/Names/${name}.mp3`)
+  audio.play();
+}
+
 
 // Ask Name
 function askName() {
@@ -38,6 +47,32 @@ function askName() {
     const current = event.resultIndex;
 
     const transcript = event.results[current][0].transcript;
-    document.body.innerHTML = transcript;
+    console.log(transcript);
+
+    if (transcript.includes('Ashley')) {
+      speakAudio('Ashley')
+    } else if (transcript.includes('Omar' || 'Ammar')) {
+      speakAudio('Ammar')
+    } else if (transcript.includes('Ethan')) {
+      speakAudio('Ethan')
+    } else if (transcript.includes('Isaiah')) {
+      speakAudio('Isaiah')
+    } else if (transcript.includes('Jospeh')) {
+      speakAudio('Joseph')
+    } else if (transcript.includes('Maria')) {
+      speakAudio('Maria')
+    } else if (transcript.includes('Omar')) {
+      speakAudio('Omar')
+    } else if (transcript.includes('Thomas')) {
+      speakAudio('Thomas')
+    } else if (transcript.includes('Tom')) {
+      speakAudio('Tom')
+    } else if (transcript.includes('William')) {
+      speakAudio('William')
+    } else {
+      var randomValue = notUnderstand[Math.floor(Math.random() * notUnderstand.length)];
+      audio = new Audio(randomValue);
+      audio.play();
+    }
   }
 }
