@@ -1,3 +1,4 @@
+
 // Speech Recognization 
 const SpeechRecognition = window.speechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition()
@@ -10,13 +11,24 @@ recognition.onstart = function () {
 // First Instance 
 document.addEventListener('DOMContentLoaded', function () {
   var audio = new Audio('./assests/hello_1.mp3')
-  audio.play();
+  // audio.play();
 
   audio.addEventListener('ended', function () {
     audio.currentTime = 0;
     askName();
   })
 });
+
+// Or First Instance
+document.querySelector('#fab-alert').addEventListener('click', function () {
+  var audio = new Audio('./assests/hello_1.mp3')
+  audio.play();
+
+  audio.addEventListener('ended', function () {
+    audio.currentTime = 0;
+    askName();
+  })
+})
 
 // Ask Name
 function askName() {
