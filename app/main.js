@@ -76,3 +76,29 @@ function askName() {
     }
   }
 }
+
+// Alarm Encouragement
+function alarmSpeak(name) {
+  audio = new Audio(`./assests/${name}.mp3`)
+  audio.play();
+}
+
+// Wake Up Array
+
+
+
+// Timer Functionality 
+function timer() {
+  var sec = 6;
+  var timer = setInterval(function () {
+    document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
+    sec--;
+    if (sec < 0) {
+      clearInterval(timer);
+      alarmSpeak('Get_up_idndnd')
+      // var randomValue = wakeUp[Math.floor(Math.random() * wakeUp.length)];
+    }
+  }, 1000);
+}
+
+timer();
