@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Or First Instance
 document.querySelector('#fab-alert').addEventListener('click', function () {
-  var audio = new Audio('./assests/2.mp3')
+  var audio = new Audio('./assests/hello_1.mp3')
   audio.play();
 
   audio.addEventListener('ended', function () {
