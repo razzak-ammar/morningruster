@@ -113,6 +113,9 @@ function firstWake() {
         if (transcript.includes('good' || 'great' || 'really well' || 'amazing')) {
           greatAudio = new Audio('./assests/Positive.mp3');
           greatAudio.play();
+        } else if (transcript.includes('bad' || 'not well')) {
+          badAudio = new Audio('./assests/Sleep_better.mp3');
+          badAudio.play();
         } else {
           var randomValue = notUnderstand[Math.floor(Math.random() * notUnderstand.length)];
           audio = new Audio(randomValue);
