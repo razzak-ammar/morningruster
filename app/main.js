@@ -12,7 +12,7 @@ recognition.onstart = function () {
 // First Instance 
 document.addEventListener('DOMContentLoaded', function () {
   var audio = new Audio('./assests/hello_1.mp3')
-  // audio.play();
+  audio.play();
 
   audio.addEventListener('ended', function () {
     audio.currentTime = 0;
