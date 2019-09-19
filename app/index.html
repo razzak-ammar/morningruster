@@ -19,7 +19,7 @@
       </ion-toolbar>
     </ion-header>
     <!-- CONTENT -->
-    <div id="demo"></div>
+    <ion-button color="primary" id="goesoff">Alarm Goes Off</ion-button>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button id="fab-alert">
         <ion-icon name="alert"></ion-icon>
@@ -42,7 +42,7 @@
         <ion-card-content>
           <ion-item>
             <ion-label>Time (24 Hour Format)</ion-label>
-            <ion-datetime display-format="D MMM H:mm" value="06-17 12:05" id="time-picker"></ion-datetime>
+            <ion-datetime display-format="D MMM YYYY H:mm" id="time-picker"></ion-datetime>
           </ion-item>
           <ion-item>
             <ion-button color="primary" id="setAlarm">Set Alarm</ion-button>
@@ -51,7 +51,8 @@
       </ion-card>
       <ion-card>
         <ion-card-header>
-          <ion-card-subtitle>You have 2 Hours and 2 Min</ion-card-title>
+          <ion-card-subtitle id="timeRemain">
+            </ion-card-title>
             <ion-card-title>Before Getting Up</ion-card-title>
         </ion-card-header>
       </ion-card>
