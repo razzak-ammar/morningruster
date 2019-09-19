@@ -19,6 +19,7 @@
       </ion-toolbar>
     </ion-header>
     <!-- CONTENT -->
+    <div id="demo"></div>
     <ion-fab vertical="bottom" horizontal="end" slot="fixed">
       <ion-fab-button id="fab-alert">
         <ion-icon name="alert"></ion-icon>
@@ -35,19 +36,16 @@
         </ion-card-content>
       </ion-card>
       <ion-card>
-        <ion-card-content>
-          <ion-button color="primary" id="sleep-btn">Go to Sleep</ion-button>
-          <div id="safeTimerDisplay"></div>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
         <ion-card-header>
           <ion-card-title center>When Would You Like to Get Up Tomorrow?</ion-card-title>
         </ion-card-header>
         <ion-card-content>
           <ion-item>
             <ion-label>Time (24 Hour Format)</ion-label>
-            <ion-datetime display-format="HH:mm" value="02:33"></ion-datetime>
+            <ion-datetime display-format="D MMM H:mm" value="06-17 12:05" id="time-picker"></ion-datetime>
+          </ion-item>
+          <ion-item>
+            <ion-button color="primary" id="setAlarm">Set Alarm</ion-button>
           </ion-item>
         </ion-card-content>
       </ion-card>
@@ -66,9 +64,9 @@
       </ion-toolbar>
     </ion-footer>
   </ion-app>
-  <script src="./main.js">
+  <script src=" ./main.js"> </script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js">
   </script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.esm.js"></script>
   <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core@4.7.4/dist/ionic/ionic.js"></script>
 </body>
 

@@ -83,27 +83,60 @@ function alarmSpeak(name) {
   audio.play();
 }
 
-// Wake Up Array
+// Catch Alarm
+document.querySelector('#setAlarm').addEventListener('click', function () {
+  let AlarmValue = document.querySelector('#time-picker').value;
+
+  if (AlarmValue === '') {
+    alert('Fix your alarm')
+  } else {
+    Alarm();
+  }
+
+});
 
 
 
-// Timer Functionality 
-function timer() {
-  var sec = 6;
-  var timer = window.setInterval(function () {
-    document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
-    sec--;
-    if (sec < 0) {
-      clearInterval(timer);
-      alarmSpeak('Get_up_idndnd')
-      // var randomValue = wakeUp[Math.floor(Math.random() * wakeUp.length)];
-    }
-  }, 1000);
+// Alarm Functionality 
+// Set the date we're counting down to
+// function Alarm() {
+//   var countDownDate = new Date("Sep 18, 2019 20:53:40").getTime();
+//   // Get today's date and time
+//   var now = new Date().getTime();
+
+//   // Find the distance between now and the count down date
+//   var distance = countDownDate - now;
+
+//   // Time calculations for days, hours, minutes and seconds
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+//   // // Display the result in the element with id="demo"
+//   // document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+//   //   + minutes + "m " + seconds + "s ";
+
+//   // If the count down is finished, write some text
+//   if (distance < 0) {
+//     console.log('FInished')
+//     alert('EXPIRED')
+//     document.getElementById("demo").innerHTML = "EXPIRED";
+//   }
+// }
+
+// Alarm Function
+function Alarm() {
+  var countDownDate = new Date("Sep 18, 2019 21:00:00").getTime();
+  // Get today's date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+
+  if (countDownDate < now) {
+    document.getElementById('demo').innerHTML = 'EXPIRED'
+  }
 }
 
-// Button Pressed Sleep
-let sleepBtn = document.querySelector('#sleep-btn');
-
-sleepBtn.addEventListener('click', function () {
-  timer();
-})
+Alarm();
