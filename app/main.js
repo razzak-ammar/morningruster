@@ -101,4 +101,9 @@ function timer() {
   }, 1000);
 }
 
-timer();
+// Button Pressed Sleep
+let sleepBtn = document.querySelector('#sleep-btn');
+
+sleepBtn.addEventListener('click', function () {
+  timer();
+})
