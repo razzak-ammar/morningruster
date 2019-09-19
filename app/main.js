@@ -90,7 +90,7 @@ function alarmSpeak(name) {
 // Timer Functionality 
 function timer() {
   var sec = 6;
-  var timer = setInterval(function () {
+  var timer = window.setInterval(function () {
     document.getElementById('safeTimerDisplay').innerHTML = '00:' + sec;
     sec--;
     if (sec < 0) {
